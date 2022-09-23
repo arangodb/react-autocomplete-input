@@ -1,0 +1,107 @@
+export default AutocompleteTextField;
+declare class AutocompleteTextField {
+    constructor(props: any);
+    isTrigger(trigger: any, str: any, i: any): boolean;
+    arrayTriggerMatch(triggers: any, re: any): any;
+    getMatch(str: any, caret: any, providedOptions: any): any;
+    handleChange(e: any): any;
+    handleKeyDown(event: any): void;
+    handleResize(): void;
+    handleSelection(idx: any): void;
+    updateCaretPosition(caret: any): void;
+    updateHelper(str: any, caret: any, options: any): void;
+    resetHelper(): void;
+    renderAutocompleteList(): any;
+    state: {
+        helperVisible: boolean;
+        left: number;
+        trigger: any;
+        matchLength: number;
+        matchStart: number;
+        options: any[];
+        selection: number;
+        top: number;
+        value: any;
+    };
+    recentValue: any;
+    enableSpaceRemovers: boolean;
+    refInput: any;
+    componentDidMount(): void;
+    componentDidUpdate(prevProps: any): void;
+    componentWillUnmount(): void;
+    render(): any;
+}
+declare namespace AutocompleteTextField {
+    export { propTypes };
+    export { defaultProps };
+}
+declare namespace propTypes {
+    const Component: any;
+    const defaultValue: any;
+    const disabled: any;
+    const maxOptions: any;
+    const onBlur: any;
+    const onChange: any;
+    const onKeyDown: any;
+    const onRequestOptions: any;
+    const onSelect: any;
+    const changeOnSelect: any;
+    const options: any;
+    const regex: any;
+    const matchAny: any;
+    const minChars: any;
+    const requestOnlyIfNoOptions: any;
+    const spaceRemovers: any;
+    const spacer: any;
+    const trigger: any;
+    const value: any;
+    const offsetX: any;
+    const offsetY: any;
+    const passThroughEnter: any;
+}
+declare namespace defaultProps {
+    const Component_1: string;
+    export { Component_1 as Component };
+    const defaultValue_1: string;
+    export { defaultValue_1 as defaultValue };
+    const disabled_1: boolean;
+    export { disabled_1 as disabled };
+    const maxOptions_1: number;
+    export { maxOptions_1 as maxOptions };
+    export function onBlur_1(): void;
+    export { onBlur_1 as onBlur };
+    export function onChange_1(): void;
+    export { onChange_1 as onChange };
+    export function onKeyDown_1(): void;
+    export { onKeyDown_1 as onKeyDown };
+    export function onRequestOptions_1(): void;
+    export { onRequestOptions_1 as onRequestOptions };
+    export function onSelect_1(): void;
+    export { onSelect_1 as onSelect };
+    export function changeOnSelect_1(trigger: any, slug: any): any;
+    export { changeOnSelect_1 as changeOnSelect };
+    const options_1: any[];
+    export { options_1 as options };
+    const regex_1: string;
+    export { regex_1 as regex };
+    const matchAny_1: boolean;
+    export { matchAny_1 as matchAny };
+    const minChars_1: number;
+    export { minChars_1 as minChars };
+    const requestOnlyIfNoOptions_1: boolean;
+    export { requestOnlyIfNoOptions_1 as requestOnlyIfNoOptions };
+    const spaceRemovers_1: string[];
+    export { spaceRemovers_1 as spaceRemovers };
+    const spacer_1: string;
+    export { spacer_1 as spacer };
+    const trigger_1: string;
+    export { trigger_1 as trigger };
+    const offsetX_1: number;
+    export { offsetX_1 as offsetX };
+    const offsetY_1: number;
+    export { offsetY_1 as offsetY };
+    const value_1: any;
+    export { value_1 as value };
+    const passThroughEnter_1: boolean;
+    export { passThroughEnter_1 as passThroughEnter };
+}
